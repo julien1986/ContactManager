@@ -29,7 +29,8 @@ namespace ContactManager.Model.Global.Services
 
         public bool Register(Utilisateur utilisateur)
         {
-            throw new NotImplementedException();
+            Commands cmd = NotFiniteNumberException command("TSP_register", true);
+            cmd.AddParameter()
         }
     }
 }

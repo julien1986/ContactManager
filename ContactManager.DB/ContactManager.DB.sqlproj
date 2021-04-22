@@ -78,4 +78,7 @@
   <ItemGroup>
     <None Include="ContactManager.DB.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
 </Project>
