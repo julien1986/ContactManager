@@ -10,7 +10,7 @@ namespace ContactManager.Model.Client.Mappers
 {
     internal static class Mappers
     {   
-        public static G_User ToGlobal(this C_user user)
+        public static G_User ToGlobal(this C_User user)
         {
             return new G_User()
             {
@@ -23,9 +23,9 @@ namespace ContactManager.Model.Client.Mappers
                 Passwd = user.Passwd
             };
         }
-        public static C_user ToClient(this G_User user)
+        public static C_User ToClient(this G_User user)
         {
-            return new C_user(user.Id, user.LastName, user.FirstName, user.Email, user.IsValid, user.Genre);
+            return new C_User(user.Id, user.LastName, user.FirstName, user.Email, user.IsValid, user.Genre);
         }
     }
 }

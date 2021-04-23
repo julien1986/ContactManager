@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ContactManager.Model.Client.Entities
 {
-    public class C_user
+    public class C_User
     {
         public int Id { get; private set; }
         public string LastName { get; set; }
@@ -16,7 +16,8 @@ namespace ContactManager.Model.Client.Entities
         public char Genre { get; set; }
         public string Passwd { get; set; }
 
-        public C_user(string lastname, string firstname, string email, bool isvalid, char genre, string passwd)
+        public C_User() { }
+        public C_User(string lastname, string firstname, string email, bool isvalid, char genre, string passwd)
         {
             LastName = lastname;
             FirstName = firstname;
@@ -26,7 +27,7 @@ namespace ContactManager.Model.Client.Entities
             Passwd = passwd;
                 
         }
-        internal C_user(int id, string lastname, string firstname, string email, bool isvalid, char genre)
+        internal C_User(int id, string lastname, string firstname, string email, bool isvalid, char genre)
             : this(lastname, firstname, email, isvalid, genre, null)
         {
             Id = id;
