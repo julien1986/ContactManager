@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ContactManager.Model.Global.Services
 {
-    public class AuthService : IAuthRepository<Utilisateur>
+    public class AuthService : IAuthRepository<G_User>
     {
         private IConnection _connexion;
 
@@ -18,7 +18,7 @@ namespace ContactManager.Model.Global.Services
         {
             _connexion = connexion;
         }
-        public Utilisateur Login(string email, string passwd)
+        public G_User Login(string email, string passwd)
         {
             Commands cmd = new Commands("TSP_AuthUser", true);
             cmd.AddParameter("@Email", email);
@@ -27,10 +27,19 @@ namespace ContactManager.Model.Global.Services
             return _connexion.ExecuteReader(cmd, dr => dr.ToUtilisateur()).SingleOrDefault();
         }
 
-        public bool Register(Utilisateur utilisateur)
+        public bool Register(G_User user)
         {
-            Commands cmd = NotFiniteNumberException command("TSP_register", true);
-            cmd.AddParameter()
+            Commands cmd = new Commands("TSP_register", true);
+            cmd.AddParameter("@LastName", user.LastName);
+            cmd.AddParameter("@FirstName", user.FirstName);
+            cmd.AddParameter("@Email", user.Email);
+            cmd.AddParameter("@Passwd", user.Passwd);
+            cmd.AddParameter("@Genre", user.Genre);
+
+            int rows = _connexion.ExecuteNonQuery(cmd);
+            user.Passwd = null;
+            return rows == 1;
+
         }
     }
 }

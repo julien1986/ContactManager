@@ -10,9 +10,9 @@ namespace ContactManager.Model.Global.Mappers
 {
     internal static class DataRecordExtentions
     {
-        internal static Utilisateur ToUtilisateur(this IDataRecord record)
+        internal static G_User ToUtilisateur(this IDataRecord record)
         {
-            return new Utilisateur()
+            return new G_User()
             {
                 Id = (int)record["Id"],
                 LastName = (string)record["LastName"],

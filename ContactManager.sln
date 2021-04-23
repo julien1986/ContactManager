@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Model.Global
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Repository", "ContactManager.Model.Repository\ContactManager.Repository.csproj", "{06BE7251-B5B2-4D6A-96FA-0A140E85D2EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Test", "ContactManager.Test\ContactManager.Test.csproj", "{21D45A90-C769-44A2-8950-614B26EF6A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Model.Client", "ContactManager.Model.Client\ContactManager.Model.Client.csproj", "{DECEB2EE-C45E-474F-9E8A-2B82E1A6BFF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{06BE7251-B5B2-4D6A-96FA-0A140E85D2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06BE7251-B5B2-4D6A-96FA-0A140E85D2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06BE7251-B5B2-4D6A-96FA-0A140E85D2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21D45A90-C769-44A2-8950-614B26EF6A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21D45A90-C769-44A2-8950-614B26EF6A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21D45A90-C769-44A2-8950-614B26EF6A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D45A90-C769-44A2-8950-614B26EF6A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DECEB2EE-C45E-474F-9E8A-2B82E1A6BFF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECEB2EE-C45E-474F-9E8A-2B82E1A6BFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECEB2EE-C45E-474F-9E8A-2B82E1A6BFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECEB2EE-C45E-474F-9E8A-2B82E1A6BFF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

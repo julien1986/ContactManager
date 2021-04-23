@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ContactManager.Model.Global.Entities
 {
-    public class Utilisateur
+    public class G_User
     {
         public int Id { get; set; }
         public string LastName { get; set; }
@@ -15,6 +15,8 @@ namespace ContactManager.Model.Global.Entities
         public bool IsValid { get; set; }
         public bool IsAdmin { get; set; }
         public char Genre { get; set; }
+
+        public string Passwd { get; set; }
         public DateTime CreationDate { get; set; }
     }
 }
