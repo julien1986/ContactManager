@@ -31,7 +31,7 @@ namespace ContactManager.API.Tools
         /// <param name="services"></param>
         protected override void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton(sp => new Connection(SqlClientFactory.Instance, @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ContactManager;Integrated Security=True"));
+            services.AddSingleton<IConnection>(sp => new Connection(SqlClientFactory.Instance, @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ContactManager;Integrated Security=True;"));
             services.AddSingleton<IAuthRepository<G_User>, GS.AuthService>();
             services.AddSingleton < IAuthRepository<C_User>, CS.AuthService > ();
         }

@@ -8,15 +8,17 @@ namespace ContactManager.API.Tools
 {
     public abstract class LocatorBase
     {
-        protected IServiceProvider Container { get; set; }
+        protected IServiceProvider Container { get; private set; }
 
-        protected abstract void ConfigureServices(IServiceCollection services);
+        
 
         public LocatorBase()
         {
             IServiceCollection services = new ServiceCollection();
             ConfigureServices(services);
             Container = services.BuildServiceProvider();
-        }   
+        }
+
+        protected abstract void ConfigureServices(IServiceCollection services);
     }
 }
